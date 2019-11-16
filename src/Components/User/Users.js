@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+
 import Useritem from './Useritem';
-import { getOuterBindingIdentifiers } from '@babel/types';
 
 class Users extends Component {
   state = {
@@ -34,7 +33,6 @@ class Users extends Component {
       }
     ]
   };
-  static propTypes = {};
 
   render() {
     return (
