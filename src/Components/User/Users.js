@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
-
+import React from 'react';
+import PropTypes from 'prop-types';
 import Useritem from './Useritem';
+import Spinner from './../Layout/Spinner';
 
-class Users extends Component {
-  state = {
+const Users = ({ users, loading }) => {
+  /* state = {
     users: [
       {
         login: 'mojombo',
@@ -33,17 +34,24 @@ class Users extends Component {
       }
     ]
   };
-
-  render() {
+*/ if (
+    loading
+  ) {
+    return <Spinner />;
+  } else {
     return (
       <div style={userStyle}>
-        {this.state.users.map(user => (
+        {users.map(user => (
           <Useritem key={user.id} user={user} />
         ))}
       </div>
     );
   }
-}
+};
+Users.propTypes = {
+  users: PropTypes.array.isRequired,
+  loading: PropTypes.bool.isRequired
+};
 const userStyle = {
   display: 'grid',
   gridTemplateColumns: 'repeat(3,1fr)',
