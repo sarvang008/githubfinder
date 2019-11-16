@@ -1,18 +1,18 @@
 import React from 'react';
-
+import Navbar from './Components/Layout/Navbar';
 import './App.css';
-import head from './head.js';
+import Users from './Components/User/Users';
 
 class App extends React.Component {
   render() {
-    const name = 'john';
-    const upper = name => {
-      return name.toUpperCase();
-    };
     return (
       <div className='App'>
-        <head />
-        <h1>github finder{upper(name)} </h1>
+        <Navbar title='Github Finder' icon='fab fa-github' />
+
+        <h1>github finder </h1>
+        <div className='container'>
+          <Users />
+        </div>
       </div>
     );
   }
