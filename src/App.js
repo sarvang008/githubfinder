@@ -1,17 +1,21 @@
 import React from 'react';
 
 import './App.css';
+import head from './head.js';
 
-function App() {
-  return (
-    <div className='App'>
-      <header className='App-header'>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    const name = 'john';
+    const upper = name => {
+      return name.toUpperCase();
+    };
+    return (
+      <div className='App'>
+        <head />
+        <h1>github finder{upper(name)} </h1>
+      </div>
+    );
+  }
 }
 
 export default App;
