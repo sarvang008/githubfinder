@@ -13,7 +13,9 @@ const Useritem = props => {
       />
       <h3>{login}</h3>
       <div>
-        <a href={html_url}>More</a>
+        <a className='moreinfo' href={html_url}>
+          More
+        </a>
       </div>
     </div>
   );

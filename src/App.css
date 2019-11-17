@@ -27,3 +27,49 @@ h3,
   margin: 30px;
   padding: 40px;
 }
+form {
+  width: 88%;
+}
+input[type='text'] {
+  display: block;
+  width: 100%;
+  margin: 30px auto 30px 50px;
+  height: 29px;
+  padding: 10px;
+  font-size: 23px;
+}
+input[type='submit'],
+.clear {
+  display: block;
+  width: 102%;
+  background-color: lawngreen;
+  border: 1px solid darkblue;
+  margin: 30px auto 30px 50px;
+  height: 40px;
+  padding: 10px;
+  font-size: 23px;
+}
+input[type='submit']:hover,
+.clear:hover {
+  background-color: darkgreen;
+}
+.moreinfo {
+  display: block;
+  background-color: red;
+  height: 20px;
+  margin: auto;
+  width: 50px;
+  padding: 10px;
+  text-align: center;
+  font-size: large;
+  color: white;
+}
+.alertmsg {
+  width: 100%;
+  background-color: bisque;
+  color: red;
+  height: 20px;
+  padding: 10px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: large;
+}
