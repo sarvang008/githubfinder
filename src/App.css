@@ -73,3 +73,15 @@ input[type='submit']:hover,
   font-family: 'Times New Roman', Times, serif;
   font-size: large;
 }
+
+li {
+  display: inline;
+  text-decoration: none;
+  margin: 10px;
+}
+.nav-link {
+  position: relative;
+  left: 1000px;
+  font-weight: bold;
+  color: cornsilk;
+}
