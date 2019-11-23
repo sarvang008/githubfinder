@@ -64,11 +64,11 @@ class App extends React.Component {
           <Navbar title='Github Finder' icon='fab fa-github' />
           <Alert alert={this.state.alert} />
           <Switch>
-            <Route exact path='/contact' component={Contact} />
-            <Route rxact path='/about' component={About} />
+            <Route exact path='githubfinder/contact' component={Contact} />
+            <Route rxact path='githubfinder/about' component={About} />
             <Route
               exact
-              path='/'
+              path='githubfinder/'
               render={props => (
                 <Fragment>
                   <Search
@@ -88,7 +88,7 @@ class App extends React.Component {
             />
             <Route
               exact
-              path='/user/:login'
+              path='githubfinder/user/:login'
               render={props => (
                 <Fragment>
                   <Userprofile
