@@ -65,7 +65,7 @@ class App extends React.Component {
           <Alert alert={this.state.alert} />
           <Switch>
             <Route exact path='/contact' component={Contact} />
-            <Route rxact path='/about' component={About} />
+            <Route exact path='/about' component={About} />
             <Route
               exact
               path='/'
