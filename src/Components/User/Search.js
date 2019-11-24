@@ -1,19 +1,17 @@
 import React, { useState } from 'react';
 
 const Search = ({ showClear, setAlert, searchUser, clear }) => {
-  state = {
-    text: ''
-  };
+  const [text, setText] = useState(''); //first parameter is statename and second parameter is update function name
   const onChange = e => {
-    this.setState({ [e.target.name]: e.target.value });
+    setText(e.target.value);
   };
   const onSubmit = e => {
     e.preventDefault();
-    if (this.state.text === '') {
+    if (text === '') {
       setAlert('Please enter search Value');
     } else {
-      searchUser(this.state.text);
-      this.setState({ text: '' });
+      searchUser(text);
+      setText('');
     }
   };
 
@@ -25,7 +23,7 @@ const Search = ({ showClear, setAlert, searchUser, clear }) => {
           name='text'
           placeholder='enter '
           onChange={onChange}
-          value={this.state.text}
+          value={text}
         />
         <input type='submit' value='Search' />
         {showClear && (
