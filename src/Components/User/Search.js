@@ -1,16 +1,20 @@
-import React, { useState } from 'react';
-
-const Search = ({ showClear, setAlert, searchUser, clear }) => {
+import React, { useState, useContext } from 'react';
+import GithubContext from './../../context/github/githubContext';
+import AlertContext from './../../context/alert/alertcontext';
+const Search = () => {
   const [text, setText] = useState(''); //first parameter is statename and second parameter is update function name
+  const githubContext = useContext(GithubContext);
+  const alertContext = useContext(AlertContext);
+
   const onChange = e => {
     setText(e.target.value);
   };
   const onSubmit = e => {
     e.preventDefault();
     if (text === '') {
-      setAlert('Please enter search Value');
+      alertContext.setAlert('Please enter search Value');
     } else {
-      searchUser(text);
+      githubContext.searchUser(text);
       setText('');
     }
   };
@@ -26,8 +30,8 @@ const Search = ({ showClear, setAlert, searchUser, clear }) => {
           value={text}
         />
         <input type='submit' value='Search' />
-        {showClear && (
-          <button className='clear' onClick={clear} value='Clear'>
+        {githubContext.users.length > 0 && (
+          <button className='clear' onClick={githubContext.clear} value='Clear'>
             Clear
           </button>
         )}

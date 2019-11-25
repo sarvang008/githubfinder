@@ -1,10 +1,13 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
 import PropTypes from 'prop-types';
+import GithubContext from './../../context/github/githubContext';
 
-const Userprofile = ({ user, match, getUser }) => {
+const Userprofile = ({ match }) => {
   // componentDidMount() {
   //   this.props.getUser(match.params.login);
   // }
+  const guthubContext = useContext(GithubContext);
+  const { getUser, user, loading } = guthubContext;
   useEffect(() => {
     //useeffect used as componentdidmount
     getUser(match.params.login);

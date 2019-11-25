@@ -22,8 +22,4 @@ const Useritem = props => {
   );
 };
 
-Useritem.propTypes = {
-  user: PropTypes.object.isRequired
-};
-
 export default Useritem;
